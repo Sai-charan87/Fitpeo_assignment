@@ -2,33 +2,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
+  padding: 20px 5%; /* Increased vertical padding and percentage horizontal padding */
   background-color: white;
-  border-bottom: 1px solid #eee;
-  gap: 20px;
-  flex-wrap: nowrap; /* Prevent wrapping */
+  border-bottom: 1px solid #f0f0f0; /* Lighter border */
+  gap: 24px; /* Increased default gap */
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1800px; /* Optional max-width constraint */
+  margin: 0 auto; /* Center header if max-width is set */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
-/* Medium screens */
+/* Medium screens (tablets) */
 @media (max-width: 992px) {
   .header {
-    padding: 16px;
+    padding: 18px 5%;
+    gap: 20px;
+  }
+}
+
+/* Small screens (large phones) */
+@media (max-width: 768px) {
+  .header {
+    padding: 16px 4%;
     gap: 16px;
   }
 }
 
-/* Small screens */
-@media (max-width: 768px) {
-  .header {
-    padding: 12px 16px;
-    gap: 12px;
-  }
-}
-
-/* Extra small screens */
+/* Extra small screens (phones) */
 @media (max-width: 480px) {
   .header {
-    padding: 10px 12px;
-    gap: 8px;
+    padding: 14px 3%;
+    gap: 12px;
+    flex-wrap: wrap; /* Allow wrapping on smallest screens */
   }
 }
