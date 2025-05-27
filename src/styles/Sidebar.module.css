@@ -6,13 +6,7 @@
   flex-direction: column;
   padding: 24px;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
-}
-
-.topSection {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  transition: all 0.3s ease;
 }
 
 .sectionTitle {
@@ -20,6 +14,12 @@
   font-weight: 600;
   color: #555;
   margin: 16px 0 8px;
+  white-space: nowrap;
+  transition: color 0.2s ease; /* Smooth color transition */
+}
+
+.sectionTitle:hover {
+  color: #3734a7;
 }
 
 .nav {
@@ -37,20 +37,27 @@
   color: #333;
   padding: 8px;
   border-radius: 8px;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav a:hover {
   background-color: #e3eaf3;
+  color: #3734a7;
+}
+
+.nav a:hover .icon {
+  color: #3734a7;
 }
 
 .icon {
   width: 18px;
   height: 18px;
   color: #4a4a4a;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
 }
 
-/* Ensures bottom link is truly at the bottom */
 .bottomSection {
   margin-top: auto;
 }
@@ -64,9 +71,59 @@
   color: #333;
   padding: 8px;
   border-radius: 8px;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .bottomLink:hover {
   background-color: #e3eaf3;
+  color: #3734a7;
+}
+
+.bottomLink:hover .icon {
+  color: #3734a7;
+}
+
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 70px;
+    padding: 24px 12px;
+    align-items: center;
+  }
+  
+  .sectionTitle,
+  .nav a span,
+  .bottomLink span {
+    display: none;
+  }
+  
+  .nav a,
+  .bottomLink {
+    justify-content: center;
+    padding: 12px;
+    width: 100%;
+  }
+  
+  .nav {
+    gap: 16px;
+  }
+}
+
+/* Mobile: Make sidebar more compact */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    padding: 16px 8px;
+  }
+  
+  .nav a,
+  .bottomLink {
+    padding: 10px;
+  }
+  
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
 }

@@ -1,39 +1,48 @@
 .cardContainer {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on larger screens */
+  flex-direction: column;
   gap: 1rem;
-  margin-top: 1rem;
+  height: 100%; /* Take full height of parent */
 }
 
 .card {
   background: #f6faff;
-  border-radius: 16px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-  padding: 1rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  flex: 1 1 calc(33.33% - 1rem); /* 3 cards per row, responsive */
-  min-width: 220px; /* Prevents too narrow cards on small screens */
-  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: translateY(-3px);
 }
 
 .topRow {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin-bottom: 8px;
+}
+
+.iconContainer {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .organ {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   color: #333;
 }
 
-
 .date {
   font-size: 12px;
-  color: #888;
+  color: #666;
+  margin-bottom: 8px;
 }
 
 .progressWrapper {
@@ -41,25 +50,9 @@
   height: 6px;
   border-radius: 5px;
   overflow: hidden;
-  margin-top: 6px;
 }
 
 .progressBar {
   height: 100%;
   border-radius: 5px;
-  transition: width 0.3s ease;
-}
-.iconContainer {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 16px;
-}
-@media (max-width: 768px) {
-  .card {
-    flex: 1 1 100%; /* Stack cards vertically on small screens */
-  }
 }

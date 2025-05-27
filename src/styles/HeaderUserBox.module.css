@@ -1,35 +1,88 @@
 .userContainer {
-  background-color: #f6faff;
-  padding: 8px 12px;
-  border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-left: auto;  /* pushes container to right */
-  width: max-content; /* shrink to content size */
+  gap: 8px; /* Reduced from 12px */
+  min-width: max-content;
 }
 
-  
-  .avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
+.avatar {
+  width: clamp(28px, 2.5vw, 32px); /* Responsive sizing */
+  height: clamp(28px, 2.5vw, 32px);
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.userName {
+  font-size: clamp(12px, 1.2vw, 14px); /* Responsive font */
+  font-weight: 500;
+  color: #2e2c96;
+  white-space: nowrap;
+}
+
+.addButton {
+  width: clamp(28px, 2.8vw, 32px);
+  height: clamp(28px, 2.8vw, 32px);
+  border-radius: 8px;
+  background-color: #3734a9;
+  color: white;
+  border: none;
+  font-size: clamp(14px, 1.4vw, 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menuButton {
+  background-color: #00e3e9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: clamp(14px, 1.4vw, 16px);
+  width: clamp(28px, 2.8vw, 32px);
+  height: clamp(28px, 2.8vw, 32px);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .userContainer {
+    gap: 6px;
   }
   
   .userName {
-    font-weight: 500;
-    color: #2e2c96;
+    display: inline; /* Keep visible but smaller */
+    font-size: 12px;
   }
   
-  .addButton {
-    background-color: #02e2f1;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    width: 32px;
-    height: 32px;
-    font-size: 20px;
-    cursor: pointer;
+  .avatar {
+    width: 24px;
+    height: 24px;
   }
   
+  .addButton,
+  .menuButton {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .userName {
+    max-width: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .avatar {
+    width: 22px;
+    height: 22px;
+  }
+}

@@ -1,44 +1,115 @@
 .container {
   background-color: #f6faff;
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
-  max-width: 400px; /* Increased from 215px */
-  margin: 0 auto; /* Center the image */
+  height: 100%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .anatomyImage {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  background-color: #f6faff;
 }
 
 .sticker {
   position: absolute;
   background-color: #4f46e5;
   color: white;
-  font-size: 0.875rem; /* Slightly larger font */
-  padding: 8px 14px; /* Slightly larger padding */
+  font-size: 1vw; 
+  padding: 0.5vw 1vw;
   border-radius: 16px;
   font-weight: 500;
   white-space: nowrap;
-  /* Add a subtle shadow for better visibility */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  min-width: max-content; 
+  transform: translate(-50%, -50%); 
 }
+
 
 .heart {
   top: 25%;
   left: 55%;
-  transform: translate(-50%, -50%);
 }
 
 .leg {
-  bottom: 20%;
+  top: 75%;
   left: 45%;
-  transform: translate(-50%, 0);
+}
+
+
+@media (min-width: 1200px) {
+  .sticker {
+    font-size: 0.9rem; 
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 1rem;
+  }
+  .imageWrapper {
+    min-height: 200px;
+  }
+  .sticker {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageWrapper {
+    min-height: 180px;
+  }
+  .anatomyImage {
+    width: 100%;
+    height: auto;
+  }
+  .sticker {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+  .heart {
+    top: 22%;
+    left: 52%;
+  }
+  .leg {
+    top: 78%;
+    left: 42%;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    min-height: 150px;
+  }
+  .sticker {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+  }
+  .heart {
+    top: 20%;
+    left: 50%;
+  }
+  .leg {
+    top: 80%;
+    left: 40%;
+  }
 }

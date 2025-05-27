@@ -2,7 +2,7 @@
   background-color: #f6faff;
   padding: 16px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+ 
 }
 
 .headerRow {
@@ -28,9 +28,9 @@
 .chart {
   display: flex;
   align-items: flex-end;
-  height: 80px; /* Reduced height */
+  height: 80px;
   width: 100%;
-  gap: 2px; /* Reduced gap */
+  gap: 2px; 
 }
 
 .barWrapper {
@@ -41,8 +41,8 @@
 
 .bar {
   width: 100%;
-  max-width: 8px; /* Added max-width */
-  margin: 0 auto; /* Center bars */
+  max-width: 8px; 
+  margin: 0 auto; 
   background-color: #4a90e2;
   border-radius: 4px 4px 0 0;
   transition: height 0.3s ease;

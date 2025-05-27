@@ -1,6 +1,5 @@
 import styles from "../styles/SimpleAppointmentCard.module.css";
 
-// Emoji map for different appointment types
 const emojiMap = {
   health: "💉",
   ophthalmologist: "👁️",
@@ -10,7 +9,7 @@ const emojiMap = {
 
 function SimpleAppointmentCard({ title, time }) {
   const lowerTitle = title.toLowerCase();
-  let emoji = "👨‍⚕️"; // default emoji
+  let emoji = "👨‍⚕️";
 
   if (lowerTitle.includes("health")) emoji = emojiMap.health;
   else if (lowerTitle.includes("ophthalmologist"))

@@ -56,6 +56,6 @@ export const calendarData = {
       { time: "10:00", active: false },
       { time: "11:00", active: false },
     ]
-    // ... repeat for rest of days (Wed–Sun)
+   
   ],
 };

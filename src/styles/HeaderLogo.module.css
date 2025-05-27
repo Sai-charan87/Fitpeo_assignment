@@ -1,4 +1,4 @@
-.logoBox {
+/* .logoBox {
   font-size: 24px;
   font-weight: bold;
   font-family: Arial, sans-serif;
@@ -13,4 +13,28 @@
 }
 
 
+   */
+   .logoBox {
+    display: flex;
+    align-items: center;
+    min-width: max-content; /* Prevent logo from shrinking */
+  }
   
+  .health {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3734a9;
+  }
+  
+  .care {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;
+  }
+  
+  @media (max-width: 480px) {
+    .health,
+    .care {
+      font-size: 16px;
+    }
+  }

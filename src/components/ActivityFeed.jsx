@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/ActivityFeed.module.css";
 
 function ActivityFeed() {
-  // 4 bars per day × 7 days = 28 values
   const barHeights = [
     100,
     60,

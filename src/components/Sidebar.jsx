@@ -1,4 +1,3 @@
-// src/components/Sidebar.jsx
 import React from "react";
 import styles from "../styles/Sidebar.module.css";
 import {
@@ -19,40 +18,49 @@ const Sidebar = () => {
       <div className={styles.topSection}>
         <h3 className={styles.sectionTitle}>General</h3>
         <nav className={styles.nav}>
-          <a href="#">
-            <LayoutDashboard className={styles.icon} /> Dashboard
+          <a href="#" title="Dashboard">
+            <LayoutDashboard className={styles.icon} />
+            <span>Dashboard</span>
           </a>
-          <a href="#">
-            <History className={styles.icon} /> History
+          <a href="#" title="History">
+            <History className={styles.icon} />
+            <span>History</span>
           </a>
-          <a href="#">
-            <CalendarDays className={styles.icon} /> Calendar
+          <a href="#" title="Calendar">
+            <CalendarDays className={styles.icon} />
+            <span>Calendar</span>
           </a>
-          <a href="#">
-            <ClipboardList className={styles.icon} /> Appointments
+          <a href="#" title="Appointments">
+            <ClipboardList className={styles.icon} />
+            <span>Appointments</span>
           </a>
-          <a href="#">
-            <BarChart className={styles.icon} /> Statistics
+          <a href="#" title="Statistics">
+            <BarChart className={styles.icon} />
+            <span>Statistics</span>
           </a>
-          <a href="#">
-            <FlaskConical className={styles.icon} /> Tests
+          <a href="#" title="Tests">
+            <FlaskConical className={styles.icon} />
+            <span>Tests</span>
           </a>
         </nav>
 
         <h3 className={styles.sectionTitle}>Tools</h3>
         <nav className={styles.nav}>
-          <a href="#">
-            <MessageCircle className={styles.icon} /> Chat
+          <a href="#" title="Chat">
+            <MessageCircle className={styles.icon} />
+            <span>Chat</span>
           </a>
-          <a href="#">
-            <LifeBuoy className={styles.icon} /> Support
+          <a href="#" title="Support">
+            <LifeBuoy className={styles.icon} />
+            <span>Support</span>
           </a>
         </nav>
       </div>
 
       <div className={styles.bottomSection}>
-        <a href="#" className={styles.bottomLink}>
-          <Settings className={styles.icon} /> Setting
+        <a href="#" className={styles.bottomLink} title="Settings">
+          <Settings className={styles.icon} />
+          <span>Setting</span>
         </a>
       </div>
     </aside>

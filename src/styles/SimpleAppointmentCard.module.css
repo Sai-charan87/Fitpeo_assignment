@@ -3,12 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e3e9fc;
-  border-radius: 12px;
+  background-color: #dde2f9;
+  border-radius: 20px;
   padding: 14px 18px;
-  margin-bottom: 12px;
+ 
   min-width: 180px;
-  max-width: 220px;
+  max-width: 280px;
   color: #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
 }
@@ -23,7 +23,7 @@
 .cardContent p {
   margin: 4px 0 0;
   font-size: 13px;
-  color: #f6faff;
+  color: #3734a9;
 }
 
 .cardIcon {

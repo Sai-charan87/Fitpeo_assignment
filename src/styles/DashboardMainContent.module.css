@@ -1,30 +1,65 @@
-/* src/styles/DashboardMainContent.module.css */
-
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.topSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ 
+  width: 100%;
+  align-items: start;
+}
+
+/* Default style for ALL grid items */
+.gridItem {
+  border-radius: 12px;
+  padding: 0.5rem;
+  background: white; /* Default white background */
+}
+
+/* Apply blue background to specific items */
+.activity-feed,
+.calendar-view,
+.upcoming-schedule {
+  background: #f6faff !important; /* Force override */
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+  .topSection {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "overview activity"
+      "overview calendar";
   }
-  
-  .column {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+
+  .dashboard-overview {
+    grid-area: overview;
+    align-self: start;
+    background: white !important; /* Ensure stays white */
   }
-  
-  /* Large screens: two-column layout */
-  @media (min-width: 1024px) {
-    .container {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-  
-    .column {
-      flex: 1;
-      min-width: 0;
-    }
+
+  .activity-feed {
+    grid-area: activity;
   }
-  
+
+  .calendar-view {
+    grid-area: calendar;
+  }
+
+  .upcoming-schedule {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .topSection {
+    grid-template-columns: 1fr;
+  }
+}

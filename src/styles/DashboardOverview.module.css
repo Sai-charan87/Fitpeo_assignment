@@ -1,28 +1,59 @@
-/* src/styles/DashboardOverview.module.css */
-
 .wrapper {
-    display: flex;
-    flex-direction: column;
-   
-    background-color: #fff;
-    gap: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+ 
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.rem;
+  font-weight: 600;
+  color: #3835aa;
+  margin: 0;
+}
+
+.timeFilter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3835aa;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+.leftColumn {
+  flex: 1;
+}
+
+.rightColumn {
+  flex: 1;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .contentWrapper {
+    flex-direction: row;
   }
   
-  /* Responsive layout: show side by side on large screens */
-  /* @media (min-width: 1024px) {
-    .wrapper {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-  } */
-  @media (min-width: 1024px) {
-    .wrapper {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: stretch; /* Make both sections equal height */
-    }
+  .leftColumn {
+    max-width: 50%;
   }
   
+  .rightColumn {
+    max-width: 50%;
+  }
+}

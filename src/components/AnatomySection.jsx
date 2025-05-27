@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/AnatomySection.module.css";
-import anatomyImg from "../assets/pic.png"; // use your image path
+import anatomyImg from "../assets/pic.png";
 
 const AnatomySection = () => {
   return (

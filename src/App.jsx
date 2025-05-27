@@ -1,7 +1,6 @@
-// src/App.jsx
-import React from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar"; // You'll need to create this
+import Sidebar from "./components/Sidebar";
 import DashboardMainContent from "./components/DashboardMainContent";
 import "./App.css";
 

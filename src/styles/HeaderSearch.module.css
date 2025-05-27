@@ -1,45 +1,112 @@
 .searchSection {
-  
   display: flex;
-  justify-content: center;
-  gap: 16px;
   align-items: center;
+  gap: 16px;
+  flex-grow: 1;
+  max-width: 500px;
+  min-width: 150px;
 }
 
-/* Wrapper for icon + input */
 .searchInputWrapper {
-  display: flex;
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 5px 5px;
-  width: 600px;
+  position: relative;
+  flex-grow: 1;
+  min-width: 120px;
 }
 
 .searchIcon {
-  margin-right: 8px;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   color: #999;
+  width: 16px;
+  height: 16px;
 }
 
 .searchInput {
-  border: none;
-  outline: none;
-  flex: 1;
-  background-color: transparent;
-  color: #999;
+  width: 100%;
+  padding: 10px 10px 10px 36px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f7f9fc;
   font-size: 14px;
+  transition: all 0.2s;
 }
 
-/* Notification bell button */
+.searchInput:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: white;
+}
+
+
 .bellButton {
-  background-color: #3734a9;
-  color: white;
-  padding: 8px 12px;
-  border: none;
+  background-color: white; /* or any color */
+  border: 1px solid #ddd;
   border-radius: 8px;
-  cursor: pointer;
+  padding: 8px;
+  
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  min-width: 40px;
+}
+
+/* Icon-only version for smaller screens */
+.bellButton .buttonText {
+  display: inline;
+  margin-left: 6px;
+}
+
+.bellButton:hover {
+  background-color: #2a2880;
+}
+
+/* Tablet styles */
+@media (max-width: 992px) {
+  .bellButton {
+    padding: 8px;
+  }
+  
+  .bellButton .buttonText {
+    display: none; /* Hide text on tablets */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .searchSection {
+    gap: 8px;
+  }
+  
+  .bellButton {
+    padding: 6px;
+    border-radius: 6px;
+    min-width: 36px;
+  }
+  
+  .searchInput {
+    padding: 8px 8px 8px 32px;
+    font-size: 13px;
+  }
+  
+  .searchIcon {
+    left: 10px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .bellButton {
+    padding: 5px;
+    min-width: 32px;
+  }
+  
+  .searchSection {
+    gap: 6px;
+  }
 }

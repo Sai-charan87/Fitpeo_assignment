@@ -15,8 +15,6 @@ function CalendarView() {
         <button className={styles.arrowBtn}>&gt;</button>
       </div>
 
-      {/* Day labels row */}
-      {/* Day labels + dates row */}
       <div className={styles.calendarWeekdays}>
         {dayNames.map((day, i) => (
           <div key={i} className={styles.dayHeader}>
@@ -26,11 +24,8 @@ function CalendarView() {
         ))}
       </div>
 
-      {/* Time slots grid */}
       <div className={styles.calendarTimeSlots}>
-        {/* For each time slot (e.g. 08:00, 09:00, etc) */}
         {calendarData.grid[0].map((_, timeIndex) => (
-          // Each time row across days
           <React.Fragment key={timeIndex}>
             {calendarData.grid.map((daySlots, dayIndex) => {
               const slot = daySlots[timeIndex];
