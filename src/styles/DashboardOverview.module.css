@@ -1,0 +1,28 @@
+/* src/styles/DashboardOverview.module.css */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+   
+    background-color: #fff;
+    gap: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Responsive layout: show side by side on large screens */
+  /* @media (min-width: 1024px) {
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  } */
+  @media (min-width: 1024px) {
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch; /* Make both sections equal height */
+    }
+  }
+  

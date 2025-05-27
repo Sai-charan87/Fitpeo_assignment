@@ -1,0 +1,28 @@
+/* styles/UpcomingSchedule.module.css */
+.upcomingSchedule {
+  padding: 20px 0;
+}
+
+.upcomingSchedule h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #3734a9;
+}
+
+.scheduleDay {
+  margin-bottom: 24px;
+}
+
+.scheduleDay h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #3734a9;
+}
+
+.scheduleDayCards {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}

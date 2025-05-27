@@ -1,0 +1,44 @@
+.container {
+  background-color: #f6faff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Increased from 215px */
+  margin: 0 auto; /* Center the image */
+}
+
+.anatomyImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sticker {
+  position: absolute;
+  background-color: #4f46e5;
+  color: white;
+  font-size: 0.875rem; /* Slightly larger font */
+  padding: 8px 14px; /* Slightly larger padding */
+  border-radius: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  /* Add a subtle shadow for better visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heart {
+  top: 25%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.leg {
+  bottom: 20%;
+  left: 45%;
+  transform: translate(-50%, 0);
+}

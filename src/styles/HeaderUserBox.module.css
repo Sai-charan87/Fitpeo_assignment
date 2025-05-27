@@ -1,0 +1,35 @@
+.userContainer {
+  background-color: #f6faff;
+  padding: 8px 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;  /* pushes container to right */
+  width: max-content; /* shrink to content size */
+}
+
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .userName {
+    font-weight: 500;
+    color: #2e2c96;
+  }
+  
+  .addButton {
+    background-color: #02e2f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  

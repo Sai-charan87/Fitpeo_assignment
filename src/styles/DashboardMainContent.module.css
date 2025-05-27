@@ -1,0 +1,30 @@
+/* src/styles/DashboardMainContent.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Large screens: two-column layout */
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .column {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+  

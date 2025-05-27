@@ -1,0 +1,72 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f6faff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.topSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin: 16px 0 8px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.nav a:hover {
+  background-color: #e3eaf3;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  color: #4a4a4a;
+}
+
+/* Ensures bottom link is truly at the bottom */
+.bottomSection {
+  margin-top: auto;
+}
+
+.bottomLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.bottomLink:hover {
+  background-color: #e3eaf3;
+}

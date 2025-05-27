@@ -1,0 +1,71 @@
+import React from "react";
+import styles from "../styles/HealthStatusCards.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faLungs, faTooth, faBone } from "@fortawesome/free-solid-svg-icons";
+const iconMap = {
+  Lungs: faLungs,
+  Teeth: faTooth,
+  Bone: faBone,
+};
+const mockCards = [
+  {
+    organ: "Lungs",
+    date: "26 Oct 2021",
+    status: "Poor",
+    color: "#FF4D4F",
+    percent: 80,
+  },
+  {
+    organ: "Teeth",
+    date: "26 Oct 2021",
+    status: "Good",
+    color: "#00C3A5",
+    percent: 65,
+  },
+  {
+    organ: "Bone",
+    date: "26 Oct 2021",
+    status: "Critical",
+    color: "#FF7A00",
+    percent: 90,
+  },
+];
+
+const HealthStatusCards = () => {
+  return (
+    <div className={styles.cardContainer}>
+      {mockCards.map((item, idx) => (
+        <div className={styles.card} key={idx}>
+          <div className={styles.topRow}>
+            <div
+              className={styles.iconContainer}
+              style={{ backgroundColor: item.color + "20" }}
+            >
+              <FontAwesomeIcon
+                icon={iconMap[item.organ]}
+                color={item.color}
+                size="lg"
+              />
+            </div>
+            <div className={styles.organ}>{item.organ}</div>
+          </div>
+
+          <div className={styles.date}>Date: {item.date}</div>
+
+          <div className={styles.progressWrapper}>
+            <div
+              className={styles.progressBar}
+              style={{
+                width: `${item.percent}%`,
+                backgroundColor: item.color,
+              }}
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default HealthStatusCards;

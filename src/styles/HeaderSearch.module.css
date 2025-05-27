@@ -1,0 +1,45 @@
+.searchSection {
+  
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Wrapper for icon + input */
+.searchInputWrapper {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px 5px;
+  width: 600px;
+}
+
+.searchIcon {
+  margin-right: 8px;
+  color: #999;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  flex: 1;
+  background-color: transparent;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Notification bell button */
+.bellButton {
+  background-color: #3734a9;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
