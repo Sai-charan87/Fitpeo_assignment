@@ -1,12 +1,23 @@
-# React + Vite
+# Health Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive health monitoring dashboard built with React and CSS. This application provides an intuitive interface for tracking medical appointments, health metrics, and patient activity.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Patient Overview**: Visual anatomy diagram with health indicators
+- **Appointment Tracking**: Calendar view with upcoming schedules
+- **Health Metrics**: Status cards for vital organs and systems
+- **Activity Feed**: Weekly appointment visualization
+- **Responsive Design**: Fully functional on all device sizes
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Create React App)
+- CSS Modules for styling
+- Lucide React for icons
+- Flexbox/Grid for layout
+- Mobile-first responsive design
+
+## Live Demo
+
+[View Live Demo](https://fitpeo-assignment-smoky.vercel.app/)
